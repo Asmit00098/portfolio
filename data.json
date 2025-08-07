@@ -1,0 +1,83 @@
+{
+  "personalInfo": {
+    "name": "Asmit Mishra",
+    "title": "Engineering Student | Web & Data Enthusiast",
+    "email": "********@gmail.com",
+    "phone": "*********",
+    "location": "Prayagraj, India",
+    "bio": "I am a student pursuing a Bachelor of Engineering in Information Science from The National Institute of Engineering , Mysore with a focus on web technologies, data structures, and data visualization. I build interactive web applications and solve algorithmic problems using modern tools. My interests include frontend development and machine learning.",
+    "photo": "about_photo.jpg",
+    "socials": [
+      {
+        "name": "GitHub",
+        "url": "https://github.com/Asmit00098",
+        "icon": "fab fa-github"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://www.instagram.com/asm1t_m/",
+        "icon": "fab fa-instagram"
+      },
+      {
+        "name": "LeetCode",
+        "url": "https://leetcode.com/u/AWlLCQo9l3/",
+        "icon": "fab fa-leetcode"
+      },
+      {
+        "name": "Coursera",
+        "url": "https://www.coursera.org/user/bc1qpjq2u4vwnyxe3u0flg8hfp3c8mfmd9f38ydu07",
+        "icon": "fab fa-coursera"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "Simple Calculator Web Application",
+      "description": "A responsive web-based calculator using HTML, CSS, and JavaScript that supports 8 arithmetic operations with input validation and error handling. Received 50+ positive GitHub reviews.",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "link": "https://github.com/Asmit00098/Calculator",
+      "image": "./images/calculator.png"
+    },
+    {
+      "title": "Rock-Paper-Scissors Game",
+      "description": "An interactive game with 3 modes and real-time score tracking. Built with JS event handling to ensure smooth gameplay and 99% success in processing user inputs.",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "link": "https://github.com/Asmit00098/Rock-Paper-scissors",
+      "image": "./images/rock-paper-scissors.png"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Machine Learning Learner & Contributor",
+      "company": "Kaggle (Self-Driven)",
+      "period": "2024",
+      "description": "Built two predictive ML models with ~15% improved accuracy, ranked top 25% in a beginner competition, and learned classification, cleaning, and statistical analysis."
+    },
+    {
+      "role": "Data Visualization Intern (Project-Based)",
+      "company": "IBM via Coursera",
+      "period": "2024",
+      "description": "Developed 4 dashboards using Python libraries; extracted insights from large datasets (>10K records)."
+    },
+    {
+      "role": "Data Structures Programmer",
+      "company": "University of Michigan via Coursera",
+      "period": "2024",
+      "description": "Completed advanced C-based DSA curriculum; optimized solutions on LeetCode, improving runtime by 20%."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages",
+      "list": ["JavaScript", "Python", "HTML5", "CSS3", "Java", "C++"]
+    },
+    {
+      "name": "Frameworks & Libraries",
+      "list": ["React (learning)", "Node.js (beginner)", "pandas", "NumPy", "Matplotlib", "scikit-learn"]
+    },
+    {
+      "name": "Tools & Platforms",
+      "list": ["Git & GitHub", "VS Code", "Jupyter Lab", "Coursera", "Kaggle"]
+    }
+  ]
+} 

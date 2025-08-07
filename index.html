@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="tab-nav">
+        <button class="tab-btn active" data-tab="about">About</button>
+        <button class="tab-btn" data-tab="projects">Projects</button>
+        <button class="tab-btn" data-tab="experience">Experience</button>
+        <button class="tab-btn" data-tab="skills">Skills</button>
+        <button class="tab-btn" data-tab="resume">Resume</button>
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+    </nav>
+    <main>
+        <section id="about" class="tab-section active"></section>
+        <section id="projects" class="tab-section"></section>
+        <section id="experience" class="tab-section"></section>
+        <section id="skills" class="tab-section"></section>
+        <section id="resume" class="tab-section"></section>
+    </main>
+    <button id="contact-btn" class="contact-btn" aria-label="Contact Me"><i class="fas fa-envelope"></i> Contact Me</button>
+    <div id="contact-modal" class="contact-modal hidden">
+      <div class="contact-modal-content">
+        <button id="close-contact-modal" class="close-modal-btn" aria-label="Close"><i class="fas fa-times"></i></button>
+        <h2>Contact Me</h2>
+        <div id="contact-details"></div>
+      </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html> 
