@@ -9,11 +9,6 @@
     "photo": "about_photo.jpg",
     "socials": [
       {
-        "name": "GitHub",
-        "url": "https://github.com/Asmit00098",
-        "icon": "fab fa-github"
-      },
-      {
         "name": "Instagram",
         "url": "https://www.instagram.com/asm1t_m/",
         "icon": "fab fa-instagram"
