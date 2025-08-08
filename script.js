@@ -39,6 +39,48 @@ document.addEventListener('DOMContentLoaded', () => {
     setTheme(!isCurrentlyLight);
   });
 
+  // Mobile hamburger menu functionality
+  const mobileNavToggle = document.getElementById('mobile-nav-toggle');
+  const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+  const mobileNavClose = document.querySelector('.mobile-nav-close');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+  function toggleMobileNav() {
+    mobileNavToggle.classList.toggle('active');
+    mobileNavOverlay.classList.toggle('visible');
+    document.body.style.overflow = mobileNavOverlay.classList.contains('visible') ? 'hidden' : '';
+  }
+
+  function closeMobileNav() {
+    mobileNavToggle.classList.remove('active');
+    mobileNavOverlay.classList.remove('visible');
+    document.body.style.overflow = '';
+  }
+
+  mobileNavToggle.addEventListener('click', toggleMobileNav);
+  mobileNavClose.addEventListener('click', closeMobileNav);
+
+  // Close mobile nav when clicking on a link
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+      
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+        closeMobileNav();
+      }
+    });
+  });
+
+  // Close mobile nav when clicking outside
+  mobileNavOverlay.addEventListener('click', (e) => {
+    if (e.target === mobileNavOverlay) {
+      closeMobileNav();
+    }
+  });
+
   // Contact modal logic
   const contactBtn = document.getElementById('contact-btn');
   const contactModal = document.getElementById('contact-modal');
