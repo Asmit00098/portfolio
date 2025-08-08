@@ -4,34 +4,146 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Asmit Mishra — Portfolio</title>
+    
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="tab-nav">
-        <button class="tab-btn active" data-tab="about">About</button>
-        <button class="tab-btn" data-tab="projects">Projects</button>
-        <button class="tab-btn" data-tab="experience">Experience</button>
-        <button class="tab-btn" data-tab="skills">Skills</button>
-        <button class="tab-btn" data-tab="resume">Resume</button>
-        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+    <!-- Navigation Arrows -->
+    <button id="prev-btn" class="nav-arrow nav-arrow-left" aria-label="Previous section">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button id="next-btn" class="nav-arrow nav-arrow-right" aria-label="Next section">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="nav-links">
+                <button class="nav-link active" data-section="0">
+                    <span class="nav-number">01</span>
+                    <span class="nav-text">About</span>
+                </button>
+                <button class="nav-link" data-section="1">
+                    <span class="nav-number">02</span>
+                    <span class="nav-text">Experience</span>
+                </button>
+                <button class="nav-link" data-section="2">
+                    <span class="nav-number">03</span>
+                    <span class="nav-text">Skills</span>
+                </button>
+                <button class="nav-link" data-section="3">
+                    <span class="nav-number">04</span>
+                    <span class="nav-text">Resume</span>
+                </button>
+            </div>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
     </nav>
-    <main>
-        <section id="about" class="tab-section active"></section>
-        <section id="projects" class="tab-section"></section>
-        <section id="experience" class="tab-section"></section>
-        <section id="skills" class="tab-section"></section>
-        <section id="resume" class="tab-section"></section>
-    </main>
-    <button id="contact-btn" class="contact-btn" aria-label="Contact Me"><i class="fas fa-envelope"></i> Contact Me</button>
-    <div id="contact-modal" class="contact-modal hidden">
-      <div class="contact-modal-content">
-        <button id="close-contact-modal" class="close-modal-btn" aria-label="Close"><i class="fas fa-times"></i></button>
-        <h2>Contact Me</h2>
-        <div id="contact-details"></div>
-      </div>
+
+    <!-- Main Container -->
+    <div id="main-container">
+        <!-- About Panel -->
+        <section id="about" class="panel active">
+            <div class="panel-wrapper">
+                <div class="background-text">ABOUT</div>
+                <div class="content-grid">
+                    <div class="content-main">
+                        <div id="about-content" class="content-block">
+                            <!-- Content will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="content-sidebar">
+                        <div id="projects-container" class="projects-section">
+                            <h2 class="section-title">Selected Work</h2>
+                            <div id="projects-scroll" class="projects-scroll"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Panel -->
+        <section id="experience" class="panel">
+            <div class="panel-wrapper">
+                <div class="background-text">EXPERIENCE</div>
+                <div class="content-grid">
+                    <div class="content-main">
+                        <div id="experience-content" class="content-block">
+                            <!-- Content will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="content-sidebar">
+                        <!-- Intentional negative space -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Panel -->
+        <section id="skills" class="panel">
+            <div class="panel-wrapper">
+                <div class="background-text">SKILLS</div>
+                <div class="content-grid">
+                    <div class="content-main">
+                        <div id="skills-content" class="content-block">
+                            <!-- Content will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="content-sidebar">
+                        <!-- Intentional negative space -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Panel -->
+        <section id="resume" class="panel">
+            <div class="panel-wrapper">
+                <div class="background-text">RESUME</div>
+                <div class="content-grid">
+                    <div class="content-main">
+                        <div id="resume-content" class="content-block">
+                            <!-- Content will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="content-sidebar">
+                        <!-- Intentional negative space -->
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+
+    <!-- Contact Button -->
+    <button id="contact-btn" class="contact-btn" aria-label="Contact Me">
+        <span class="contact-text">Contact</span>
+        <i class="fas fa-envelope"></i>
+    </button>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="contact-modal hidden">
+        <div class="contact-modal-content">
+            <button id="close-contact-modal" class="close-modal-btn" aria-label="Close">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="modal-title">Get in Touch</h2>
+            <div id="contact-details" class="contact-details"></div>
+        </div>
+    </div>
+
     <script src="script.js" defer></script>
 </body>
 </html> 
